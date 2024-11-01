@@ -4,44 +4,51 @@ import { Heading } from '@/components/ui/heading';
 import { Separator } from '@/components/ui/separator';
 import VideoTable from './video-tables';
 import { Video } from '@/constants/data';
+import Image from 'next/image';
 
 type TVideosListingPage = {};
 
 const mockVideos: Video[] = [
   {
     id: 1,
-    title: 'Morning Yoga Routine',
-    thumbnail: 'https://example.com/thumbnails/yoga1.jpg',
-    workoutLevel: 'Beginner',
-    duration: '15:30',
-    views: 1200,
-    comments: 34,
-    ratings: 4.5,
-    shares: 10
+    title: 'Ngày 26/10/2024',
+    thumbnail: '/icon.webp', // Corrected path with leading slash
+    status: 'Đã thanh toán',
+    time: '99.000',
+    des: 'Thanh toán thành công cho đơn hàng mùa đông',
+    stk: '0945199743',
+    code: 'DH001'
   },
   {
     id: 2,
-    title: 'HIIT Workout for Beginners',
-    thumbnail: 'https://example.com/thumbnails/hiit1.jpg',
-    workoutLevel: 'Beginner',
-    duration: '20:45',
-    views: 2300,
-    comments: 56,
-    ratings: 4.7,
-    shares: 15
+    title: 'Ngày 01/11/2024',
+    thumbnail: '/icon.webp', // Remote image URL
+    status: 'Đang xử lý',
+    time: '99.000',
+    des: 'Đơn hàng đang chờ xác nhận',
+    stk: '987654321',
+    code: 'DH002'
   },
   {
     id: 3,
-    title: 'Advanced Cardio Blast',
-    thumbnail: 'https://example.com/thumbnails/cardio1.jpg',
-    workoutLevel: 'Advanced',
-    duration: '30:00',
-    views: 5400,
-    comments: 78,
-    ratings: 4.9,
-    shares: 25
+    title: 'Ngày 15/10/2024',
+    thumbnail: '/icon.webp', // Another remote image
+    status: 'Hoàn thành',
+    time: '99.000',
+    des: 'Đơn hàng giao thành công',
+    stk: '9876543211231',
+    code: 'DH003'
+  },
+  {
+    id: 4,
+    title: 'Ngày 03/10/2024',
+    thumbnail: '/icon.webp',
+    status: 'Hoàn thành',
+    time: '99.000',
+    des: 'Đơn hàng giao thành công',
+    stk: '98762312312',
+    code: 'DH004'
   }
-  // Add more mock data if needed
 ];
 
 export default function VideoListingPage({}: TVideosListingPage) {
@@ -52,7 +59,7 @@ export default function VideoListingPage({}: TVideosListingPage) {
     <PageContainer scrollable>
       <div className="space-y-4">
         <div className="flex items-start justify-between">
-          <Heading title={`Videos (${total})`} description="Manage videos" />
+          <Heading title={`Thanh toán (${total})`} description="Quản lý đơn hàng" />
         </div>
         <Separator />
         <VideoTable data={result} totalData={total} />

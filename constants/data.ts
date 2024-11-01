@@ -125,10 +125,10 @@ export type Video = {
   id: number;
   title: string;
   thumbnail: string;
-  workoutLevel: string;
-  duration: string;
-  views: number;
-  comments: number;
-  ratings: number;
-  shares: number;
+  status: string;
+  time: string;
+  des: string;
+  stk: string;
+  code: string;
+  
 };

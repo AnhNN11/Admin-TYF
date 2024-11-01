@@ -27,48 +27,46 @@ export const columns: ColumnDef<Video>[] = [
   },
   {
     accessorKey: 'title',
-    header: 'TITLE'
+    header: 'Ngày Tạo'
   },
   {
     accessorKey: 'thumbnail',
-    header: 'THUMBNAIL',
+    header: 'Ngân Hàng',
     cell: ({ row }) => {
       return (
-        <div className="relative aspect-square h-16 w-16">
-          <Image
-            src={row.getValue('thumbnail')}
-            alt={row.getValue('title')}
-            fill
-            className="rounded-lg object-cover"
-          />
-        </div>
+        <div className="relative h-8 w-8">
+  <Image
+    src={'/icon.webp'}
+    alt={row.getValue('title')}
+    fill
+    className="rounded-full object-cover"
+  />
+</div>
+
       );
     }
   },
   {
-    accessorKey: 'workoutLevel',
-    header: 'WORKOUT LEVEL'
+    accessorKey: 'status',
+    header: 'Trạng Thái'
   },
   {
-    accessorKey: 'duration',
-    header: 'DURATION'
+    accessorKey: 'time',
+    header: 'Số Tiền'
   },
   {
-    accessorKey: 'views',
-    header: 'VIEWS'
+    accessorKey: 'des',
+    header: 'Mô Tả'
   },
   {
-    accessorKey: 'comments',
-    header: 'COMMENTS'
+    accessorKey: 'stk',
+    header: 'Số Tài Khoản'
   },
   {
-    accessorKey: 'ratings',
-    header: 'RATINGS'
+    accessorKey: 'code',
+    header: 'Mã đơn'
   },
-  {
-    accessorKey: 'shares',
-    header: 'SHARES'
-  },
+  
   {
     id: 'actions',
     cell: ({ row }) => <CellAction data={row.original} />

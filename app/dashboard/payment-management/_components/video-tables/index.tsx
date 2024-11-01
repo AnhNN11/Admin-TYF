@@ -33,7 +33,7 @@ export default function VideoTable({
       .includes(searchQuery.toLowerCase());
 
     const matchesGender =
-      !workoutLevelFilter || video.workoutLevel === workoutLevelFilter;
+      !workoutLevelFilter || video.status === workoutLevelFilter;
 
     return matchesSearch && matchesGender;
   });

@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const salesData = [
   {
     name: 'Nguyễn Phương Anh',
-    email: 'olivia.martin@email.com',
+    email: 'phuonganh2003@gmail.com',
     amount: '99.000 VND',
     avatarSrc:
       'https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/348264093_6272663529480981_4638713035102162505_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=jYkdN1Zc7b8Q7kNvgFwEoEv&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=A0IF7A-oZwA-MsjbP8zX0iB&oh=00_AYD80cYBIqEJIlO7SmmWWXGIA6S3V1z1XAbaKItAtM7Pzg&oe=672A3E1B',
@@ -11,9 +11,9 @@ const salesData = [
   },
   {
     name: 'Nguyễn Đoàn Salem',
-    email: 'jackson.lee@email.com',
+    email: 'salemnguyen201@gmail.com',
     amount: '99.000 VND',
-    avatarSrc: '/avatars/02.png',
+    avatarSrc: 'https://www.kkday.com/vi/blog/wp-content/uploads/chup-anh-dep-bang-dien-thoai-7.jpg',
     fallback: 'JL'
   },
   {
@@ -26,9 +26,9 @@ const salesData = [
   },
   {
     name: 'Phan Dạ Quyên',
-    email: 'sofia.davis@email.com',
+    email: 'quyenphan.da@gmail.com',
     amount: '99.000 VND',
-    avatarSrc: '/avatars/05.png',
+    avatarSrc: 'https://www.kkday.com/vi/blog/wp-content/uploads/chup-anh-dep-bang-dien-thoai-25.jpg',
     fallback: 'SD'
   }
 ];
